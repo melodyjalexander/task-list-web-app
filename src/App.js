@@ -2,18 +2,48 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  let myTitle = "Today";
-  let taskStatus = "Upcoming";
-  let sampleTask = "Pick up drying cleaning";
+  let avatarImage = require("./sampleAvatar.jpeg");
   return (
     <div>
-      <h1>{myTitle}</h1>
-      <h2>{taskStatus}</h2>
-      <ul>
-        <li>{sampleTask}</li>
-        <li>{sampleTask}</li>
-        <li>{sampleTask}</li>
-      </ul>
+      <header>
+        <div className="dateHeader">
+          <h1>Friday, February 5, 2021</h1>
+        </div>
+
+        <div className="user">
+          <img
+            src={avatarImage}
+            className="userAvatar"
+            alt="sample avatar illustration"
+          ></img>
+          <h2>Lucy Young</h2>
+        </div>
+      </header>
+
+      <nav>
+        <ul>
+          <li>
+            <h4>Tasks</h4>
+          </li>
+          <li>
+            <h4>Journal</h4>
+          </li>
+          <li>
+            <h4>Budget</h4>
+          </li>
+        </ul>
+      </nav>
+
+      <div>
+        <button></button>
+        <p>Current</p>
+        <p>Complete batch orders from Saturday</p>
+        <button></button>
+      </div>
+
+      <div>
+        <button>Add new task</button>
+      </div>
     </div>
   );
 }

@@ -1,1 +1,107 @@
 /* Your CSS Here */
+@font-face {
+  font-family: "apercuregular";
+  src: url("apercu_regular-webfont.woff2") format("woff2"),
+    url("apercu_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aperculight";
+  src: url("apercu_light-webfont.woff2") format("woff2"),
+    url("apercu_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apercumedium";
+  src: url("apercu_medium-webfont.woff2") format("woff2"),
+    url("apercu_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apercubold";
+  src: url("apercu_bold-webfont.woff2") format("woff2"),
+    url("apercu_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apercuitalic";
+  src: url("apercu_italic-webfont.woff2") format("woff2"),
+    url("apercu_italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(252, 252, 252);
+  color: #333333;
+}
+
+h1 {
+  font-family: "apercuregular", sans-serif;
+  font-size: 24px;
+}
+
+h2 {
+  font-family: "apercuregular", sans-serif;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-bottom: 1px solid #333333;
+}
+
+img {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #333333;
+  border-radius: 100%;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userAvatar {
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border-bottom: 1px solid #333333;
+}
