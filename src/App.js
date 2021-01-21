@@ -34,15 +34,19 @@ function App() {
         </ul>
       </nav>
 
-      <div>
-        <button></button>
-        <p>Current</p>
-        <p>Complete batch orders from Saturday</p>
-        <button></button>
-      </div>
+      <div className="taskList">
+        <p className="taskListTitle">Current</p>
+        <div className="taskContainer">
+          <label>
+            <input type="radio" name="radio-button" value="task" />
+            <span>Package batch orders from Saturday</span>
+          </label>
+          <button className="editButton">+</button>
+        </div>
 
-      <div>
-        <button>Add new task</button>
+        <div>
+          <button className="addTask">Add new task</button>
+        </div>
       </div>
     </div>
   );
