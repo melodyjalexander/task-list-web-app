@@ -25,7 +25,7 @@ function App() {
       id: 2,
       title: "Pet",
       description: "Pick up dog food at 2pm",
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 3,
@@ -61,11 +61,33 @@ function App() {
     setNewTaskDescription("");
   };
 
+  const handleCompleteTask = (id) => (event) => {
+    const newList = todoList.map((todoItem) => {
+      if (todoItem.id === id) {
+        return Object.assign({}, todoItem, {
+          isCompleted: !todoItem.isCompleted,
+        });
+      } else {
+        return todoItem;
+      }
+    });
+    setTodoList(newList);
+  };
+
+  const handleDelete = (id) => (event) => {
+    const newList = todoList.filter((todoItem) => todoItem.id !== id);
+    setTodoList(newList);
+  };
+
   return (
     <div>
       <Header user={user} />
       <Tab />
-      <TodoList todoList={todoList} />
+      <TodoList
+        todoList={todoList}
+        onCompleteTask={handleCompleteTask}
+        handleDelete={handleDelete}
+      />
       <div className="newTaskModule">
         <label>
           <h4>Tag</h4>

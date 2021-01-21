@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./todoitem.js";
 
-export default function TodoList({ todoList, onCompleteTask }) {
+export default function TodoList({ todoList, onCompleteTask, handleDelete }) {
   return (
     <div className="taskList">
       <p className="taskListTitle">Current</p>
@@ -11,6 +11,7 @@ export default function TodoList({ todoList, onCompleteTask }) {
           key={todoItem.id}
           todoItem={todoItem}
           onCompleteTask={onCompleteTask}
+          handleDelete={handleDelete}
         />
       ))}
     </div>

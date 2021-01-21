@@ -159,38 +159,6 @@ li {
   align-items: center;
 }
 
-label > input[type="checkbox"] {
-  display: none;
-}
-
-label > input[type="checkbox"] + *::before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 2rem;
-  height: 2rem;
-  margin: 10px 0;
-  margin-right: 1rem;
-  border-radius: 80%;
-  border-style: solid;
-  border-width: 0.1rem;
-  border-color: #333333;
-}
-
-label > input[type="checkbox"]:checked + *::before {
-  background: radial-gradient(
-    rgb(33, 34, 34) 0%,
-    rgb(34, 34, 34) 40%,
-    transparent 50%,
-    transparent
-  );
-  border-color: #333333;
-}
-
-label > input[type="checkbox"]:checked + * {
-  color: #333333;
-}
-
 span {
   margin: 10px 0;
   font-size: 18px;
