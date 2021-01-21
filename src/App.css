@@ -61,6 +61,13 @@ h4 {
   font-size: 18px;
 }
 
+h5 {
+  font-family: "aperculight", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 p {
   font-family: "aperculight", sans-serif;
   font-size: 18px;
@@ -131,12 +138,26 @@ li {
 .taskContainer {
   margin: 0px 30px;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
+  flex-flow: column;
+  align-items: left;
+  height: 125px;
   border-top: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+}
+
+.taskTag {
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #333333;
+  border-radius: 30px;
+  width: max-content;
+  background-color: #f2f0f9;
+}
+
+.taskActionsContainer {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 label > input[type="radio"] {
@@ -149,6 +170,7 @@ label > input[type="radio"] + *::before {
   vertical-align: middle;
   width: 2rem;
   height: 2rem;
+  margin: 10px 0;
   margin-right: 1rem;
   border-radius: 80%;
   border-style: solid;
@@ -158,8 +180,8 @@ label > input[type="radio"] + *::before {
 
 label > input[type="radio"]:checked + *::before {
   background: radial-gradient(
-    lightblue 0%,
-    lightblue 40%,
+    rgb(33, 34, 34) 0%,
+    rgb(34, 34, 34) 40%,
     transparent 50%,
     transparent
   );
@@ -171,22 +193,15 @@ label > input[type="radio"]:checked + * {
 }
 
 span {
+  margin: 10px 0;
   font-size: 18px;
   font-family: "aperculight", sans-serif;
   color: #333333;
 }
 
-button {
-  appearance: none;
-  text-rendering: none;
-  color: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
 .editButton {
   border: 0.1rem solid #333333;
-  background-color: rgb(64, 144, 210);
+  background-color: rgb(252, 252, 252);
   width: 2rem;
   height: 2rem;
   border-radius: 80%;
@@ -197,10 +212,9 @@ button {
 
 .addTask {
   margin: 30px;
-  padding: 18px 32px;
+  padding: 14px 28px;
   border-radius: 80px;
-  border: 1px solid #333333;
-  font-size: 14px;
-  font-family: "aperculight", sans-serif;
-  background-color: rgb(145, 179, 241);
+  border: none;
+  color: rgb(252, 252, 252);
+  background-color: #333333;
 }
