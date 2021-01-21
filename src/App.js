@@ -2,16 +2,17 @@ import React from "react";
 import "./App.css";
 import Header from "./components/header.js";
 import Tab from "./components/tabbar.js";
-import Todo from "./components/todo.js";
+import TodoList from "./components/todoList.js";
 import avatarImage from "./sampleAvatar.jpeg";
+import { useState } from "react";
 
 function App() {
-  const user = {
+  const [user, setUser] = useState({
     name: "Lucy Young",
     avatar: avatarImage,
-  };
+  });
 
-  const todoList = [
+  const [todoList, setTodoList] = useState([
     {
       id: 1,
       title: "Business",
@@ -30,13 +31,18 @@ function App() {
       description: "Schedule teeth cleaning soon",
       isCompleted: false,
     },
-  ];
+  ]);
 
   return (
     <div>
       <Header user={user} />
       <Tab />
-      <Todo todoList={todoList} />
+      <TodoList todoList={todoList} />
+      <div>
+        <button className="addTask">
+          <h5>Add new task</h5>
+        </button>
+      </div>
     </div>
   );
 }
