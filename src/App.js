@@ -6,9 +6,9 @@ import TodoList from "./components/todoList.js";
 import avatarImage from "./sampleAvatar.jpeg";
 import { useState } from "react";
 import { nanoid } from "nanoid";
-import TodoItem from "./components/todoitem";
 
 function App() {
+  // eslint-disable-next-line
   const [user, setUser] = useState({
     name: "Lucy Young",
     avatar: avatarImage,
