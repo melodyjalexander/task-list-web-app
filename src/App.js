@@ -110,7 +110,7 @@ function App() {
         </label>
       </div>
       <button className="addTask" onClick={handleAddNewTask}>
-        <h5>Add new task</h5>
+        <h5>Add new task!</h5>
       </button>
     </div>
   );
