@@ -10,7 +10,7 @@ import { nanoid } from "nanoid";
 function App() {
   // eslint-disable-next-line
   const [user, setUser] = useState({
-    name: "Lucy Young",
+    name: "Keisha Long",
     avatar: avatarImage,
   });
 
